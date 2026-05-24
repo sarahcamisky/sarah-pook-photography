@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sarah Pook Photography — Wadhurst, East Sussex</title>
+<link rel="icon" type="image/svg+xml" href="exports/favicon.svg">
 <style>
   /* ───────── Tokens ───────── */
   :root {
@@ -66,26 +67,44 @@
     height: 78px;
   }
   .brand {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    line-height: 0.9;
+    text-decoration: none;
+  }
+  .brand__marks {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: 22px;
-    letter-spacing: 0.005em;
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    line-height: 0.85;
   }
-  .brand em {
+  .brand__marks em {
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
   }
-  .brand .dot {
-    width: 5px; height: 5px;
+  .brand__dot {
+    width: 4px; height: 4px;
     border-radius: 50%;
     background: var(--ink);
     display: inline-block;
-    transform: translateY(-3px);
-    margin: 0 2px;
+    margin: 0 6px;
+    transform: translateY(1px);
   }
+  .brand__name {
+    font-family: var(--sans);
+    font-size: 8.5px;
+    letter-spacing: var(--tracked);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .brand__name .sep { margin: 0 0.5em; color: var(--ink-mute); }
   .nav__links {
     display: flex;
     gap: 36px;
@@ -679,11 +698,40 @@
     gap: 24px;
   }
   .footer__brand {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 16px;
-    color: var(--ink-soft);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    line-height: 0.9;
   }
+  .footer__brand .brand__marks {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    display: inline-flex;
+    align-items: center;
+    line-height: 0.85;
+  }
+  .footer__brand .brand__marks em { font-style: italic; }
+  .footer__brand .brand__dot {
+    width: 3.5px; height: 3.5px;
+    border-radius: 50%;
+    background: var(--ink-soft);
+    display: inline-block;
+    margin: 0 5px;
+    transform: translateY(1px);
+  }
+  .footer__brand .brand__name {
+    font-family: var(--sans);
+    font-size: 8px;
+    letter-spacing: var(--tracked);
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 500;
+  }
+  .footer__brand .brand__name .sep { margin: 0 0.5em; }
   .footer__social {
     display: flex;
     gap: 24px;
@@ -754,7 +802,8 @@
 <header class="nav" id="nav">
   <div class="wrap nav__inner" style="padding: 0px 38.8px">
     <a href="#top" class="brand" data-comment-anchor="brand">
-      Sarah<span class="dot"></span>Pook <em>Photography</em>
+      <span class="brand__marks">S<span class="brand__dot"></span><em>P</em></span>
+      <span class="brand__name">Sarah Pook<span class="sep">·</span>Photography</span>
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#weddings">Weddings</a>
@@ -1157,7 +1206,7 @@ memories</em>.
     </div>
 
     <div class="contact__actions reveal">
-      <a class="btn btn--primary" href="/cdn-cgi/l/email-protection#1f6c7e6d7e773173316f7070745f78727e7673317c7072">
+      <a class="btn btn--primary" href="/cdn-cgi/l/email-protection#780b190a191056145608171713381f15191114561b1715">
         <span>Email</span>
         <span class="arrow">→</span>
       </a>
@@ -1176,13 +1225,14 @@ memories</em>.
 <!-- ─────────── FOOTER ─────────── -->
 <footer class="footer">
   <div class="wrap footer__inner" style="font-size: 16px">
-    <div class="footer__brand">Sarah
-Pook
-Photography</div>
+    <div class="footer__brand">
+      <span class="brand__marks">S<span class="brand__dot"></span><em>P</em></span>
+      <span class="brand__name">Sarah Pook<span class="sep">·</span>Photography</span>
+    </div>
     <nav class="footer__social" aria-label="Social">
       <a href="https://www.instagram.com/sarahpookphotography/" target="_blank" rel="noopener" style="font-size: 11px">Instagram</a>
       <a href="https://www.facebook.com/SarahPookPhotography/" target="_blank" rel="noopener" style="font-size: 11px">Facebook</a>
-      <a href="/cdn-cgi/l/email-protection#a7d4c6d5c6cf89cb89d7c8c8cce7c0cac6cecb89c4c8ca" style="font-size: 11px">Email</a>
+      <a href="/cdn-cgi/l/email-protection#483b293a292066246638272723082f25292124662b2725" style="font-size: 11px">Email</a>
     </nav>
     <div class="footer__copy" style="font-size: 11px">© Sarah Pook Photography 2026</div>
   </div>
